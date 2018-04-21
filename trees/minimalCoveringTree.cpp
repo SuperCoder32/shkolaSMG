@@ -1,8 +1,10 @@
+//Hackerrank: Kruskal
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
-struct rebro {
+struct Edge {
     int from;
     int to;
     int weight;
@@ -10,14 +12,14 @@ struct rebro {
 
 const int MAXN = 3000;
 
-rebro edges[5000000];
+Edge edges[5000000];
 int treeId[MAXN];
 
-bool comp(rebro a, rebro b) {
+bool comp(Edge a, Edge b) {
     return a.weight < b.weight;
 }
 
-void printRebro(rebro a) {
+void printRebro(Edge a) {
     cout << a.from << " ";
     cout << a.to << " ";
     cout << a.weight << "\n";
